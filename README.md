@@ -1,7 +1,3 @@
-Here’s a clean and polished version of your `README.md` file in proper Markdown format, optimized for clarity, professionalism, and GitHub presentation:
-
----
-
 # 💼 Portfolio Project
 
 A modern and responsive portfolio built with **React**, **Vite**, and **Tailwind CSS**. This project highlights your skills, showcases your projects, and provides easy contact access — all wrapped in a visually appealing UI.
