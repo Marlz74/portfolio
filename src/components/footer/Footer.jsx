@@ -5,16 +5,20 @@ const Footer = () => {
   return (
     <div className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-4 gap-8">
       <div className="w-full h-full flex flex-col gap-8">
-        <img className="w-32" src={logo} alt="logo" />
+        <div className="w-32 h-32 flex items-center justify-center rounded-full border-2 border-gray-400 overflow-hidden ">
+          <img className="w-32  object-contain " src={logo} alt="logo" />
+        </div>
         <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaFacebookF />
+          {/* X Icon with hover effect */}
+          <span className="bannerIcon hover-effect">
+            <a href="https://x.com/SD_Marlz74" target="_blank" rel="noopener noreferrer" title="X" >
+              <img src="/icon/x.svg" alt="X Logo" className="w-6 h-6" title="X" />
+            </a>
           </span>
-          <span className="bannerIcon">
-            <FaTwitter />
-          </span>
-          <span className="bannerIcon">
-            <FaLinkedinIn />
+          <span className="bannerIcon hover-effect">
+            <a href="https://www.linkedin.com/in/utibe-bassey-019846245/" target="_blank" title="LinkedIn" rel="noopener noreferrer">
+              <FaLinkedinIn className="w-6 h-6" title="LinkedIn" />
+            </a>
           </span>
         </div>
       </div>

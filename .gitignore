@@ -9,3 +9,7 @@ yarn.lock
 *.log
 .tailwindcss/
 .vite/
+.env
+.env.development
+.env.production
+.env.local

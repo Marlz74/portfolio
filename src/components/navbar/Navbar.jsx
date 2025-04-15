@@ -11,8 +11,15 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
-      <div>
-        <img src={logo} alt="logo" />
+      <div className="flex items-center justify-center gap-2">
+        <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-400 overflow-hidden">
+          <img
+            src={logo}
+            alt="logo"
+            className="w-10 h-10 object-contain"
+          />
+        </div>
+        <span className="text-xl font-bold ">SD</span>
       </div>
       <div>
         <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
