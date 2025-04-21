@@ -1,5 +1,5 @@
 class ApiService {
-    static baseURL = import.meta.env.VITE_API_BASE_URL || location.origin;
+    static baseURL = import.meta.env.VITE_API_BASE_URL || "https://space.kreater.africa";
 
     /**
      * Generic method to make API requests
