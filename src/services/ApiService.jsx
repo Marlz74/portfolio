@@ -42,10 +42,6 @@ class ApiService {
             }
             const isJSON = response.headers.get("content-type")?.includes("application/json");
 
-            console.log(isJSON);
-
-            
-
             const responseData = await response.json();
 
             // Pass the response to the callback
