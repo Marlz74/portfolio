@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 import ApiService from '../../services/ApiService';
+import { toast } from 'react-toastify';
+
 
 const Contact = () => {
   const [username, setUsername] = useState('');
@@ -55,7 +57,7 @@ const Contact = () => {
     setLoading(true);
     try {
       ApiService.post({
-        endpoint: '/api/sendEmail',
+        endpoint: '/api/send-email.php',
         payload: {
           username,
           phoneNumber,
@@ -67,10 +69,13 @@ const Contact = () => {
           setLoading(false);
           if (!response) {
             setErrMsg('Failed to send message. Please try again later.');
+            toast.error('Failed to send message. Please try again later.');
+
             return;
           }
           if (response.status) {
-            setSuccessMsg(`Thank you dear ${username}, your message has been sent successfully!`);
+            toast.success(`Thank you ${username}, your message has been sent successfully!`);
+            setSuccessMsg(`Thank you ${username}, your message has been sent successfully!`);
             setErrMsg('');
             setUsername('');
             setPhoneNumber('');
@@ -80,6 +85,8 @@ const Contact = () => {
             setErrors({});
           } else {
             setErrMsg('Failed to send message. Please try again later.');
+            toast.error('Failed to send message. Please try again later.');
+
           }
         },
       });

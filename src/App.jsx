@@ -8,6 +8,9 @@ import Navbar from "./components/navbar/Navbar.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Resume from "./components/resume/Resume.jsx";
 import Testimonial from "./components/tesimonial/Testimonial.jsx";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
         <Contact />
         <Footer />
         <FooterBottom />
+        <ToastContainer />
+
       </div>
     </div>
   );
