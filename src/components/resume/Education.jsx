@@ -12,56 +12,62 @@ const Education = () => {
       {/* part one */}
       <div>
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">1998 - 2010</p>
+          <p className="text-sm text-designColor tracking-[4px]">2003 - 2022</p>
           <h2 className="text-3xl md:text-4xl font-bold">Education Quality</h2>
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="BSc in Computer Science"
-            subTitle="University of DVI (2006 - 2010)"
-            result="3.90/4"
-            des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
+            title="B.Eng in Computer Engineering"
+            subTitle="University of Uyo (2017 - 2022)"
+            result="3.51/5"
+            des="Completed a comprehensive five year program focused on computer hardware, software systems, and electronics. Gained strong foundations in programming, system design, and digital logic essential for solving real world engineering problems."
           />
-          <ResumeCard
-            title="AS - Science & Information"
-            subTitle="SuperKing College (2001 - 2005)"
-            result="4.75/5"
-            des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
-          />
+
           <ResumeCard
             title="Secondary School Education"
-            subTitle="Kingstar Secondary School (1998 - 2000)"
-            result="5.00/5"
-            des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
+            subTitle="Presbyterian Senior Science School, Ididep (2014 - 2017)"
+            result="WASSCE/NECO"
+            des="Completed senior secondary education with a focus on science subjects. Acquired strong foundational knowledge in Mathematics, Physics, Chemistry, and Biology, leading to certifications in WASSCE and NECO."
           />
+
+          <ResumeCard
+            title="Junior School Education"
+            subTitle="Ikono People's High School, Nung Ukim (2011 - 2014)"
+            result="BEC"
+            des="Completed junior secondary education, developing core academic skills across subjects such as English, Basic Science, and Social Studies, and earned the Basic Education Certificate (BEC)."
+          />
+
         </div>
       </div>
       {/* part Two */}
 
       <div>
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2010 - 2022</p>
+          <p className="text-sm text-designColor tracking-[4px]">2020 - {new Date().getFullYear()}</p>
           <h2 className="text-3xl md:text-4xl font-bold">Job Experience</h2>
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="Sr. Software Engineer"
-            subTitle="Google Out Tech - (2017 - Present)"
-            result="USA"
-            des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."
+            title="Backend Developer"
+            subTitle="Coderigi - (2024 - 2025)"
+            result="Uyo, Nigeria"
+            des="Responsible for designing, building, and maintaining server-side applications and APIs. Worked closely with frontend developers and DevOps teams to ensure smooth product delivery and optimal performance in production environments."
           />
+
+          <ResumeCard
+            title="Server Administrator"
+            subTitle="Kreater Africa - (2022 - 2024)"
+            result="Uyo, Nigeria"
+            des="Managed and maintained company server, implemented security protocols, automated deployments, and ensured system uptime. Played a key role in supporting the infrastructure for internal tools and client applications."
+          />
+
           <ResumeCard
             title="Web Developer & Trainer"
-            subTitle="Apple Developer Team - (2012 - 2016)"
-            result="MALAYSIA"
-            des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."
+            subTitle="Wedigraf Technologies Ltd (2023), Coderigi (2024 - 2025)"
+            result="Nigeria"
+            des="Trained aspiring developers on full-stack web development with a focus on real-world projects. Mentored junior developers at Coderigi, offering guidance on best coding practices, version control, and industry standard workflows."
           />
-          <ResumeCard
-            title="Front-end Developer"
-            subTitle="Nike - (2020 - 2011)"
-            result="Oman"
-            des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."
-          />
+
         </div>
       </div>
     </motion.div>

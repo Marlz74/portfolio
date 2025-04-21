@@ -1,66 +1,56 @@
 import React from "react";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import ResumeCard from "./ResumeCard";
 
 const Experience = () => {
+  // You can replace the link below with the actual URL of your hosted CV (e.g., Google Drive, Dropbox, etc.)
+  const cvLink = "https://docs.google.com/document/d/17JZX1Hi9UoINXdzeYq5berbNb0axV6lo/";  // Replace this with your actual link
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="py-12 font-titleFont flex gap-20"
+      className="py-12 font-titleFont flex gap-20 flex-wrap" // Added flex-wrap for responsiveness
     >
+      {/* View CV Section */}
+      <div className="mt-12 w-full flex justify-center">
+        <a
+          href={cvLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-designColor text-white py-3 px-6 rounded-md text-lg font-semibold hover:bg-opacity-80 transition duration-300 w-full sm:w-auto text-center" // Adjusted width for responsiveness
+        >
+          View My CV
+        </a>
+      </div>
+
       <div>
         <div className="flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2010 - 2022</p>
+          <p className="text-sm text-designColor tracking-[4px]">2020 - {new Date().getFullYear()}</p>
           <h2 className="text-4xl font-bold">Job Experience</h2>
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="Sr. Software Engineer"
-            subTitle="Google Out Tech - (2017 - Present)"
-            result="USA"
-            des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."
+            title="Engineering Team Lead & Backend Developer"
+            subTitle="Coderigi - (2024 - Present)"
+            result="Uyo, Akwa Ibom State, Nigeria"
+            des="Led backend development for Rigitix, an event ticketing and management platform, developing RESTful APIs, optimizing server performance, and integrating secure payment systems."
           />
           <ResumeCard
-            title="Web Developer & Trainer"
-            subTitle="Apple Developer Team - (2012 - 2016)"
-            result="MALAYSIA"
-            des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."
+            title="Full Stack Developer"
+            subTitle="Kreater - (2022 - 2024)"
+            result="Uyo, Akwa Ibom State, Nigeria"
+            des="Developed a shipment tracking system, integrated third-party tools like Mailchimp and Google Analytics, and optimized backend processes to improve application performance."
           />
           <ResumeCard
-            title="Front-end Developer"
-            subTitle="Nike - (2020 - 2011)"
-            result="Oman"
-            des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."
+            title="Backend Developer (Contract)"
+            subTitle="Story Sharing App (BLINK) - (October 2024)"
+            result="Remote"
+            des="Developed backend APIs for content management, integrated third-party payment gateways, and enhanced user security using JWT-based authentication."
           />
         </div>
       </div>
-      <div>
-        <div className="flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2001 - 2020</p>
-          <h2 className="text-4xl font-bold">Trainer Experience</h2>
-        </div>
-        <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-          <ResumeCard
-            title="Gym Instructor"
-            subTitle="Rainbow Gym Center (2015 - 2020)"
-            result="DHAKA"
-            des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
-          />
-          <ResumeCard
-            title="Web Developer and Instructor"
-            subTitle="SuperKing College (2010 - 2014)"
-            result="CANADA"
-            des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
-          />
-          <ResumeCard
-            title="School Teacher"
-            subTitle="Kingstar Secondary School (2001 - 2010)"
-            result="NEVADA"
-            des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
-          />
-        </div>
-      </div>
+
     </motion.div>
   );
 };
