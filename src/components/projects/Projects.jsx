@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../layouts/Title'
 import ProjectsCard from './ProjectsCard'
 import api from '/images/api.png'
+import broadway from '/images/broadway.jpeg'
 import jobwings from '/images/jobwings.jpeg'
 import kreater from '/images/kreater.jpeg'
 import phartse from '/images/phartse.jpeg'
@@ -48,13 +49,15 @@ const Projects = () => {
           title="Pharste Fintech App"
           des="A fintech app for currency exchange and P2P transactions."
           src={phartse}
+          websiteLink="https://pharste.com/"
+
         />
 
         <ProjectsCard
-          title="Custom MVC API Template"
-          des="A PHP-based API template for custom MVC applications."
-          src={api}
-          githubLink="https://github.com/Marlz74/api_template_php"
+          title="Broadway Importation"
+          des="A logistics platform for shipping goods to Nigeria."
+          src={broadway}
+          websiteLink="https://broadwayimportation.com/"
         />
 
         <ProjectsCard
